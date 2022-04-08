@@ -1,0 +1,57 @@
+\documentclass[t, pdf, unicode, notheorems]{beamer}
+
+\mode<presentation>
+{
+%---------------------------тема оформления-------------------------------------------------
+    %\usetheme{Madrid}                 %оптимально
+    \usetheme{EastLansing}
+    \usecolortheme{beaver}
+
+    %\useinnertheme{rectangles}
+    \usefonttheme{serif} % <----------- HERE
+}
+		%\setbeamertemplate{blocks}[default][shadow=false]
+\setbeamertemplate{blocks}[shadow=false]
+\setbeamertemplate{navigation symbols}{}
+
+\setbeamercolor{block body}{bg=}
+		%\setbeamercolor{block title}{bg=,fg=black}
+
+
+\usepackage{fontenc}     % внутренняя T2A кодировка TeX
+\usepackage[utf8]{inputenc}   % кодировка - можно использовать [cp866] [utf8]
+\usepackage[russian]{babel}   % включение переносов
+\usepackage{dsfont}          % двойные буквы
+\usepackage{helvet}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+\usepackage{mdwtab}
+\usepackage{graphicx}
+
+
+%\usepackage{blindtext}
+\usepackage{enumitem}
+\usepackage{enumerate}
+\usepackage{textcomp}
+
+%%%%%%%%% Окружения
+%\let\definition\relax\newtheorem{theorem}
+\setbeamertemplate{theorems}[numbered]
+\setbeamertemplate{section in toc}{\inserttocsectionnumber.~\inserttocsection}
+
+\newtheorem{theorem}{Теорема}
+\newtheorem{lemma}{Лемма}
+\newtheorem{corollary}{Следствие}
+\newtheorem{definition}{Определение}
+\newtheorem{example}{Пример}
+\newtheorem{assumption}{Предположение}
+
+\newcommand{\exam}{\refstepcounter{ex_no} {{\par\smallskip\bf {Пример }}{\bf{\arabic{lecnum}.\arabic{ex_no}~}}} }
+%\newtheorem{lemma}{Лемма}[lecnum]
+%\newtheorem{proposition}{Предложение}[lecnum]
+%\newtheorem{claim}{Утверждение}[lecnum]
+%\newtheorem{corollary}{Следствие}[lecnum]
+%\newtheorem{definition}{Определение}[lecnum]
