@@ -3,25 +3,36 @@
 \mode<presentation>
 {
 %---------------------------тема оформления-------------------------------------------------
-    %\usetheme{Madrid}                 %оптимально
-    \usetheme{EastLansing}
-    \usecolortheme{beaver}
+	\usetheme{EastLansing}
+	\usecolortheme{beaver}
 
-    %\useinnertheme{rectangles}
-    \usefonttheme{serif} % <----------- HERE
+	\usefonttheme{serif} % <----------- HERE
 }
-		%\setbeamertemplate{blocks}[default][shadow=false]
 \setbeamertemplate{blocks}[shadow=false]
 \setbeamertemplate{navigation symbols}{}
 
 \setbeamercolor{block body}{bg=}
-		%\setbeamercolor{block title}{bg=,fg=black}
+\definecolor{TitleBgColor}{RGB}{220,220,220}
+\setbeamercolor{titlelike}{bg=TitleBgColor,fg=black}
+\setbeamertemplate{footline}
+{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.5\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+    \usebeamerfont{author in head/foot}\insertshortauthor
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.5\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
+    \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{4em}
+    \insertframenumber{} / \inserttotalframenumber\hspace*{2ex}
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+\setbeamertemplate{headline}{}
 
 
 \usepackage{fontenc}     % внутренняя T2A кодировка TeX
 \usepackage[utf8]{inputenc}   % кодировка - можно использовать [cp866] [utf8]
 \usepackage[russian]{babel}   % включение переносов
-\usepackage{dsfont}          % двойные буквы
 \usepackage{helvet}
 \usepackage{amsmath}
 \usepackage{amsfonts}
@@ -50,8 +61,3 @@
 \newtheorem{assumption}{Предположение}
 
 \newcommand{\exam}{\refstepcounter{ex_no} {{\par\smallskip\bf {Пример }}{\bf{\arabic{lecnum}.\arabic{ex_no}~}}} }
-%\newtheorem{lemma}{Лемма}[lecnum]
-%\newtheorem{proposition}{Предложение}[lecnum]
-%\newtheorem{claim}{Утверждение}[lecnum]
-%\newtheorem{corollary}{Следствие}[lecnum]
-%\newtheorem{definition}{Определение}[lecnum]
