@@ -1,0 +1,39 @@
+\documentclass[t, pdf, unicode, notheorems]{beamer}
+
+\mode<presentation>
+{
+	\usetheme{EastLansing} %They really are all the same to me
+	\usecolortheme{beaver} %Nice red color though
+	\usefonttheme{serif}
+}
+
+\setbeamertemplate{blocks}[shadow=false]
+\setbeamertemplate{navigation symbols}{} %Remove navigation symbols from PDF
+\setbeamertemplate{theorems}[numbered]
+\setbeamertemplate{caption}[numbered]
+\setbeamertemplate{headline}{} %Remove headline
+\setbeamercolor{block body}{bg=} %I like minimalism, so no blocks
+\setbeamertemplate{bibliography item}{\insertbiblabel} %Bibliography with numbers, not pictures
+
+\definecolor{TitleBgColor}{RGB}{220,220,220}
+\setbeamercolor{titlelike}{bg=TitleBgColor,fg=black} %Other than name
+
+%Footline with author and date
+\setbeamertemplate{footline}
+{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.5\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+    \usebeamerfont{author in head/foot}\insertshortauthor
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.5\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
+    \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{4em}
+    \insertframenumber{} / \inserttotalframenumber\hspace*{2ex}
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+
+% IncludesPath should be set in importing file
+\input{\IncludesPath/LatexCommonHeader.tex}
+
+\usepackage{helvet}
