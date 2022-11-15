@@ -1,6 +1,10 @@
-\usepackage[T2A]{fontenc}     % внутренняя T2A кодировка TeX
-\usepackage[utf8]{inputenc}   % кодировка - можно использовать [cp866] [utf8]
-\usepackage[english, russian]{babel}   % включение переносов
+%font stuffs
+\usepackage{polyglossia}
+\setmainfont{CMU Serif}
+% that is only used for hyphenation IDK
+\setdefaultlanguage{russian}
+\setotherlanguages{english}
+
 \usepackage{amsthm,amsfonts,amsmath,amssymb,amscd} %maths
 \usepackage[style=gost-numeric, sorting=ynt,%bibiliography tool
             language=auto, autolang=other]{biblatex}
