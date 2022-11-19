@@ -1,10 +1,13 @@
 \documentclass[t, pdf, unicode, notheorems]{beamer}
 
+% IncludesPath should be set in importing file
+\input{\IncludesPath/LatexCommonHeader.tex}
+
 \mode<presentation>
 {
 	\usetheme{EastLansing} %They really are all the same to me
 	\usecolortheme{beaver} %Nice red color though
-	\usefonttheme{serif}
+	\usefonttheme{professionalfonts}
 }
 
 \setbeamertemplate{blocks}[shadow=false]
@@ -32,8 +35,3 @@
   \end{beamercolorbox}}%
   \vskip0pt%
 }
-
-% IncludesPath should be set in importing file
-\input{\IncludesPath/LatexCommonHeader.tex}
-
-\usepackage{helvet}

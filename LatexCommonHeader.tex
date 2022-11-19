@@ -1,11 +1,16 @@
 %font stuffs
 \usepackage{polyglossia}
-\setmainfont{CMU Serif}
-\setmonofont{CMU Typewriter Text}
 % that is only used for hyphenation IDK
-\setdefaultlanguage{russian}
-\setotherlanguages{english}
+\defaultfontfeatures{Renderer=Basic,Ligatures={TeX}}
+\setmainfont{CMU Serif}
+\newfontfamily{\cyrillicfont}{CMU Serif}
+\setsansfont{CMU Serif}
+\newfontfamily{\cyrillicfontsf}{CMU Serif}
+\setmonofont{CMU Typewriter Text}
 \newfontfamily{\cyrillicfonttt}{CMU Typewriter Text}
+
+\setdefaultlanguage[babelshorthands=true]{russian}
+\setotherlanguages{english}
 
 \usepackage{amsthm,amsfonts,amsmath,amssymb,amscd} %maths
 \usepackage[style=gost-numeric, sorting=ynt,%bibiliography tool
