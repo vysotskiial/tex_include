@@ -6,11 +6,11 @@
 \newfontfamily{\cyrillicfont}{CMU Serif}
 \setsansfont{CMU Serif}
 \newfontfamily{\cyrillicfontsf}{CMU Serif}
-\setmonofont{CMU Typewriter Text}
-\newfontfamily{\cyrillicfonttt}{CMU Typewriter Text}
+\setmonofont[RawFeature=-tlig]{DejaVu Sans Mono}
+\newfontfamily{\cyrillicfonttt}{DejaVu Sans Mono}
 
-\setdefaultlanguage[babelshorthands=true]{russian}
-\setotherlanguages{english}
+\setdefaultlanguage{english}
+\setotherlanguages{russian}
 
 \usepackage{amsthm,amsfonts,amsmath,amssymb,amscd} %maths
 \usepackage[style=gost-numeric, sorting=ynt,%bibiliography tool
@@ -22,6 +22,25 @@
 
 \usepackage{indentfirst} %Indent first paragraph after section
 \usepackage{csquotes} %Language dependent quotation
+
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks = true,
+	urlcolor = blue
+}
+
+\usepackage{listings}
+\usepackage{xcolor}
+\definecolor{Ccomment}{rgb}{0,0.6,0}
+\definecolor{Cstring}{HTML}{6A5A3D}
+\lstset{basicstyle=
+	\footnotesize\ttfamily,
+	tabsize=2,
+	texcl=true, % Comments are treated like regular TeX
+	commentstyle=\color{Ccomment},
+	keywordstyle=\color{brown},
+	stringstyle=\color{Cstring},
+}
 
 % Environments used
 \newtheorem{theorem}{Теорема}
