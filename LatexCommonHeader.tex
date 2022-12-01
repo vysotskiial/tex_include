@@ -9,8 +9,8 @@
 \setmonofont[RawFeature=-tlig]{DejaVu Sans Mono}
 \newfontfamily{\cyrillicfonttt}{DejaVu Sans Mono}
 
-\setdefaultlanguage{english}
-\setotherlanguages{russian}
+\setdefaultlanguage{russian}
+\setotherlanguages{english}
 
 \usepackage{amsthm,amsfonts,amsmath,amssymb,amscd} %maths
 \usepackage[style=gost-numeric, sorting=ynt,%bibiliography tool
@@ -34,7 +34,7 @@
 \definecolor{Ccomment}{rgb}{0,0.6,0}
 \definecolor{Cstring}{HTML}{6A5A3D}
 \lstset{basicstyle=
-	\footnotesize\ttfamily,
+	\footnotesize\selectlanguage{english}\ttfamily,
 	tabsize=2,
 	texcl=true, % Comments are treated like regular TeX
 	commentstyle=\color{Ccomment},
