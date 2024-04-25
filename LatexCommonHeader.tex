@@ -20,12 +20,15 @@
 \usepackage{graphicx}
 \usepackage{subcaption}
 
+\DeclareCaptionLabelSeparator{dash}{ -- }
+\captionsetup{labelsep=dash}
+
 \usepackage{indentfirst} %Indent first paragraph after section
 \usepackage{csquotes} %Language dependent quotation
 
 \usepackage{hyperref}
 \hypersetup{
-	colorlinks = true,
+	colorlinks = false,
 	urlcolor = blue
 }
 
@@ -50,15 +53,13 @@
 \theoremstyle{definition}
 \newtheorem{definition}{Определение}
 \newtheorem{assumption}{Предположение}
-\newtheorem{note}{Замечание}
 \newtheorem{example}{Пример}
-\newtheorem*{example*}{Пример}
+\newtheorem{statement}{Утверждение}
 
-\numberwithin{note}{section}
-\numberwithin{example}{section}
-\numberwithin{definition}{section}
-\numberwithin{assumption}{section}
-\numberwithin{theorem}{section}
-\numberwithin{lemma}{section}
+\let\note\relax
+\newtheorem{note}{Замечание}
+\newtheorem*{note*}{Замечание}
 
-\numberwithin{equation}{section}
+\newcommand{\td}[1]{\tilde{#1}}
+\newcommand{\m}{\phantom{-}}
+\newcommand{\sign}{\text{sign}}

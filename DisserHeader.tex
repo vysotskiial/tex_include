@@ -4,6 +4,21 @@
 
 \usepackage[top=2cm,bottom=2cm,left=3cm,right=1.5cm]{geometry}
 \usepackage{enumitem} %Customizable enumerations
+
+\usepackage{fancyhdr}
+\fancyhf{}
+\fancyhead[C]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\setlength{\headheight}{17pt}
+\pagestyle{fancy}
 \renewcommand{\baselinestretch}{1.5}
-\newcommand{\m}{\phantom{-}}
-\newcommand{\td}[1]{\tilde{#1}}
+
+\numberwithin{note}{section}
+\numberwithin{example}{section}
+\numberwithin{definition}{section}
+\numberwithin{assumption}{section}
+\numberwithin{theorem}{section}
+\numberwithin{lemma}{section}
+\numberwithin{statement}{section}
+
+\numberwithin{equation}{section}
